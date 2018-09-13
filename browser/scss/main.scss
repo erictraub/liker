@@ -1,6 +1,9 @@
 html, body {
   margin: 0px;
   padding: 0px;
-  height: 384px;
   min-height: 180px;
+  width: 384px;
+  background: #f8f9fa;
 }
+
+@import 'landing/main';

@@ -10,5 +10,11 @@
 		"default_icon": "browser/assets/icon19.png",
 		"default_popup": "popup.html"
 	},
-	"permissions": [ "activeTab" ]
+	"permissions": [ "activeTab" ],
+	"content_scripts": [
+		{
+			"matches": [ "<all_urls>" ],
+			"js": [ "scripts/content.js" ]
+		}
+	]
 }

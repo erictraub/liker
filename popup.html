@@ -5,12 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Traversy Launcher</title>
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/style.css">
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="public/main.js"></script>
 </head>
 <body ng-app="LikerApp">
-	<div id="main" ui-view></div>
+		
+	<!-- landing page -->
+	<div class="container" id="landing" ng-controller="LandingController">
+		<div class="row">
+			<div class="col-md-12">
+				<button ng-click="click()">Button</button>
+				Hello {{ name }}
+			</div>
+		</div>
+	</div>
+	<!-- end landing page -->
+
 </body>
 </html>
