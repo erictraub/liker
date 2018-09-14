@@ -2,5 +2,20 @@ html, body {
   margin: 0px;
   padding: 0px;
   min-height: 180px;
-  width: 384px;
-  background: #f8f9fa; }
+  width: 380px;
+  background: #f8f9fa;
+  height: 550px; }
+
+#landing .img-container {
+  text-align: center;
+  margin-top: 150px; }
+
+#landing .logo-img {
+  height: 65px; }
+
+#landing .text-container {
+  margin-top: 30px;
+  text-align: center; }
+  #landing .text-container p {
+    font-size: 14px;
+    padding: 0px 15px; }

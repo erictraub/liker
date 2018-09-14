@@ -10,11 +10,32 @@
 		"default_icon": "browser/assets/icon19.png",
 		"default_popup": "popup.html"
 	},
-	"permissions": [ "activeTab" ],
+	"permissions": [ 
+		"activeTab",
+		"tabs",
+		"cookies",
+		"<all_urls>",
+		"storage",
+		"webRequest",
+		"webRequestBlocking"
+	],
 	"content_scripts": [
+		// {
+		// 	"matches": [ "<all_urls>" ],
+		// 	"js": [ "scripts/content.js" ]
+		// },
 		{
-			"matches": [ "<all_urls>" ],
-			"js": [ "scripts/content.js" ]
+		  "all_frames": true,
+		  "js": ["scripts/content.js"],
+		  "matches": ["*://*/chrome-run-on-domain-*"],
+		  "run_at": "document_start"
 		}
-	]
+	],
+	"web_accessible_resources": [
+		"browser/assets/*"
+	],
+	"background": {
+		"scripts": [ "scripts/background.js" ],
+		"persistent": true
+	}
 }

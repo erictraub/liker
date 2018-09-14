@@ -1,8 +1,12 @@
 app.controller('LandingController', function ($scope) {
-	console.log('landing ctrl works')
-	$scope.click = function() {
-		console.log('CLICKED');
-	};
+	console.log('landing ctrl works');
+	chrome.cookies.getAll({domain: "instagram.com"}, function(cookies) {
+	  console.log('COOKIES HERE: ', cookies);
+	});
 
-	$scope.name = 'ERIC';
+    chrome.storage.local.get(null, function (result) {
+	    console.log("CHANELS: ", result);
+    });
 });
+
+
